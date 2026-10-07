@@ -31,11 +31,5 @@ Thumbs.db
 *.vmrk
 *.eeg
 
-# Generated outputs that can be recreated
-/results/*
-!/results/.gitkeep
-/figures/*
-!/figures/.gitkeep
-
 # Environment / secrets
 .env
