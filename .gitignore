@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Neuroimaging data
+/data/*
+!/data/README.md
+/derivatives/
+
+# Large neuroimaging formats
+*.nii
+*.nii.gz
+*.fif
+*.edf
+*.bdf
+*.set
+*.vhdr
+*.vmrk
+*.eeg
+
+# Generated outputs that can be recreated
+/results/*
+!/results/.gitkeep
+/figures/*
+!/figures/.gitkeep
+
+# Environment / secrets
+.env
