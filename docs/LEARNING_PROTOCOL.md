@@ -38,11 +38,15 @@ Each topic should normally contain five parts:
 
 1. Concept / Концепция
    - explain only what is needed now;
-   - connect it to statistics, psychology, Data Science or ML where useful.
+   - connect it to statistics, psychology, Data Science or ML where useful;
+   - the lecture text remains the primary learning material and should not be replaced by an infographic or summary poster.
 
 2. Visual explanation / Наглядное объяснение
    - every important new concept should be accompanied by a diagram, illustration, annotated image, plot, or other visual representation when this improves understanding;
-   - visuals should explain the mechanism, structure, spatial relation, temporal process, or data representation rather than decorate the lesson.
+   - visuals should explain the mechanism, structure, spatial relation, temporal process, or data representation rather than decorate the lesson;
+   - visuals should be embedded directly between the relevant conceptual blocks, not collected into one large poster by default;
+   - one visual should usually explain one idea or one small cluster of closely related ideas;
+   - a large summary poster is optional and should only be created when explicitly useful as a recap.
 
 3. Practice / Практика
    - use real neuroimaging data as early as possible;
