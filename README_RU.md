@@ -26,6 +26,20 @@
 
 `events → HRF → design matrix → GLM`.
 
+## Визуальный обзор
+
+### Как устроен реальный датасет
+
+![BIDS structure of ds000117](figures/learning/bids_structure_ds000117.png)
+
+Проект начинается со структуры реального BIDS-датасета: участники и сессии, structural MRI, BOLD fMRI, параметры сканирования и экспериментальные события.
+
+### Structural T1w MRI vs BOLD fMRI
+
+![T1w MRI versus BOLD fMRI](figures/learning/t1w_vs_bold_fmri.png)
+
+Один и тот же участник представлен разными типами изображений и разными voxel grids. T1w MRI даёт детальную анатомию, а BOLD fMRI обеспечивает повторные измерения во времени при более низком пространственном разрешении.
+
 ## Текущие учебные материалы
 
 - [01 - NIfTI, fMRI и structural MRI: первая практическая контрольная точка](docs/01_nifti_mri_fmri_basics.md)

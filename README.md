@@ -26,6 +26,20 @@ After the spatial/data foundations are secure, the next analysis sequence will b
 
 `events → HRF → design matrix → GLM`.
 
+## Visual overview
+
+### How the real dataset is organized
+
+![BIDS structure of ds000117](figures/learning/bids_structure_ds000117.png)
+
+The project starts from the structure of a real BIDS dataset: participant/session hierarchy, structural MRI, BOLD fMRI, acquisition metadata, and experimental events.
+
+### Structural T1w MRI vs BOLD fMRI
+
+![T1w MRI versus BOLD fMRI](figures/learning/t1w_vs_bold_fmri.png)
+
+The same participant is represented by different image types and voxel grids. T1w MRI provides high-detail anatomy, while BOLD fMRI provides repeated measurements over time at lower spatial resolution.
+
 ## Current learning materials
 
 - [01 - NIfTI, fMRI and structural MRI: first practical checkpoint](docs/01_nifti_mri_fmri_basics.md)
