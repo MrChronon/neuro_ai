@@ -4,4 +4,6 @@ scipy
 matplotlib
 nibabel
 nilearn
+boto3
+dipy
 jupyterlab
