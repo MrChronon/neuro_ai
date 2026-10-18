@@ -6,7 +6,7 @@ The project uses real multimodal neuroimaging data from the **Wakeman & Henson d
 
 ## Current stage
 
-**Stage 1: Neuroimaging foundations — spatial checkpoint completed**
+**Stage 1: Neuroimaging foundations — spatial checkpoint completed; experimental timing / HRF / convolution checkpoint completed**
 
 Using real `sub-01` MRI/fMRI data, the project has now covered:
 
@@ -27,9 +27,18 @@ Using real `sub-01` MRI/fMRI data, the project has now covered:
 
 The spatial block is intentionally educational rather than a production preprocessing pipeline. Future statistical analyses will use a standard preprocessing workflow, while the notebook preserves the underlying concepts.
 
+**Temporal checkpoint (sub-01, run-01):**
+
+- decoded 9 experimental conditions and separated 93 stimulus presentations from 92 button events;
+- modeled canonical HRF responses and explored event overlap and hypothetical amplitude changes;
+- validated discrete convolution with `np.convolve()`;
+- created the full 416 s stimulus predictor (model grid 0.1 s) and separate `faces` (61) / `scrambled` (32) predictors;
+- checked convolution linearity with `np.allclose()`;
+- **no GLM or inferential BOLD effect has been estimated yet**.
+
 **Next learning block:**
 
-`events.tsv → temporal experimental structure → HRF → convolution → design matrix → GLM`
+`event durations → temporal sampling at 208 fMRI volumes → design matrix → GLM`
 
 ## Visual overview
 
@@ -51,10 +60,17 @@ The spatial block is intentionally educational rather than a production preproce
 
 ![Contour QC after rigid coregistration](figures/results/coregistration_contour_qc.png)
 
+### Experimental timing and HRF predictors (modeled)
+
+![Nine-condition event timeline](figures/results/experimental_event_timeline_run01.png)
+
+![Faces vs scrambled modeled predictors](figures/results/faces_vs_scrambled_hrf_predictors_run01.png)
+
 ## Current learning materials
 
 - [01 — MRI/fMRI spatial foundations: NIfTI, orientation and coregistration](docs/01_nifti_mri_fmri_basics.md)
 - [01 — Real-data NIfTI / MRI / fMRI notebook](notebooks/01_nifti_mri_fmri_basics.ipynb)
+- [02 — Experimental events → HRF → convolution (Russian recap)](docs/02_events_hrf_convolution.md)
 - [Learning protocol](docs/LEARNING_PROTOCOL.md)
 
 ## Learning principle
