@@ -18,14 +18,22 @@ The chapters follow the same real-data workflow used in the notebooks. Raw neuro
    - translation and rigid coregistration
    - resampling and three-plane visual QC
 
+2. [Experimental events, HRF and convolution: learning recap](02_events_hrf_convolution.md)
+   - `events.tsv` and 9 stimulus conditions
+   - canonical HRF and overlapping responses
+   - discrete convolution and `np.convolve`
+   - 93 real onsets → modeled predictor
+   - `faces` (61) vs `scrambled` (32), verified linearity
+   - methodological assumptions and next checkpoint
+
 ## Project protocol
 
 - [Learning protocol](LEARNING_PROTOCOL.md)
 
 ## Current checkpoint
 
-Spatial foundations are complete at the introductory practical level.
+Spatial foundations are complete at the introductory practical level. The temporal events → HRF → convolution learning checkpoint is also completed (no GLM or measured BOLD effects yet).
 
 ## Next step
 
-`events.tsv → temporal experimental structure → HRF → convolution → design matrix → GLM`
+`event durations → fMRI acquisition time sampling (208 volumes) → design matrix → GLM`
