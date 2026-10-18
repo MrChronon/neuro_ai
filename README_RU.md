@@ -6,7 +6,7 @@
 
 ## Текущий этап
 
-**Этап 1: основы нейровизуализации — пространственный блок закрыт**
+**Этап 1: основы нейровизуализации — пространственный блок закрыт; события, HRF и свёртка изучены**
 
 На реальных MRI/fMRI данных `sub-01` мы прошли:
 
@@ -27,9 +27,18 @@
 
 Пространственный pipeline в notebook учебный: он нужен для понимания механизмов. Для будущего статистического анализа будет использоваться стандартный preprocessing workflow.
 
+**Временной checkpoint (`sub-01`, `run-01`):**
+
+- выделены 9 условий; 93 предъявления отделены от 92 событий нажатия кнопок;
+- изучены canonical HRF, временное перекрытие ответов и влияние гипотетических весов событий;
+- ручная свёртка проверена через `np.convolve()`;
+- построен модельный предиктор для всего 416-секундного run на сетке 0.1 s;
+- построены отдельные `faces` (61) и `scrambled` (32), линейность свёртки проверена через `np.allclose()`;
+- **реальные BOLD-эффекты, β и GLM ещё не оценивались**.
+
 **Следующий блок:**
 
-`events.tsv → временная структура эксперимента → HRF → convolution → design matrix → GLM`
+`event durations → 208 временных точек fMRI → design matrix → GLM`
 
 ## Визуальный обзор
 
@@ -51,10 +60,17 @@
 
 ![Contour QC after rigid coregistration](figures/results/coregistration_contour_qc.png)
 
+### Временная структура и предикторы HRF (результат модели)
+
+![Девять экспериментальных условий](figures/results/experimental_event_timeline_run01.png)
+
+![Модельные предикторы faces и scrambled](figures/results/faces_vs_scrambled_hrf_predictors_run01.png)
+
 ## Текущие учебные материалы
 
 - [01 — Пространственные основы MRI/fMRI: NIfTI, orientation и coregistration](docs/01_nifti_mri_fmri_basics.md)
 - [01 — Notebook с реальными NIfTI / MRI / fMRI данными](notebooks/01_nifti_mri_fmri_basics.ipynb)
+- [02 — Памятка: experimental events → HRF → convolution](docs/02_events_hrf_convolution.md)
 - [Протокол обучения](docs/LEARNING_PROTOCOL.md)
 
 ## Принцип обучения
